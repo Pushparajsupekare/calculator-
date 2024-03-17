@@ -1,0 +1,51 @@
+import java.io.*;
+import java.lang.*;
+import java.lang.Math;
+import java.util.Scanner;
+// DRIVER CLASS
+class  BasicCalculator
+{
+	//main function
+	public static void main(String[] args) 
+	{
+		// store twi number
+		double num1,num2;
+		// take input from the user
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter the numbers:");
+		// take the inputs
+		num1=in.nextDouble();
+		num2=in.nextDouble();
+		System.out.println("Enter the operators(+,-,*,/):");
+		char pp=in.next().charAt(0);
+		double a=0;
+
+		switch (pp)
+		{
+			// case to add the numbers
+		case '+':
+			a=num1+num2;
+		break;
+		// case to substract the numbers
+		case '-':
+			a=num1-num2;
+		break;
+		// case to multiple the numbers
+		case '*':
+			a=num1*num2;
+		break;
+		// case to divide the numbers
+		case '/':
+			a=num1/num2;
+		break;
+		default :
+			System.out.println("Enter the wrong input");
+			
+		
+		}
+		System.out.println("The final result :");
+		System.out.println();
+		System.out.println(num1+""+pp+""+num2+"="+a);
+
+	}
+}
